@@ -1,0 +1,39 @@
+Ejercicio:
+
+CochesCutres.com es un negocio de venta de vehículos de segunda mano. Actualmente, tienen todo su negocio en papel, 
+con fichas de los vehículos, clientes, empleados y las diferentes operaciones de compra/venta.
+De los vehículos se guardan los siguientes datos:
+- Marca, Modelo, número de puertas, color, kilómetros, tipo de vehículo (utilitario, coupé, familiar, SUV o industrial), garantía (en meses) y si está en stock o no
+y fotografía.
+
+De los clientes se almacena:
+
+- NIF, Nombre, Apellidos, Teléfono, Dirección e Email.
+
+De los empleados se almacenan los mismos datos que de los clientes.
+
+De las operaciones de compra/venta se almacenan los siguientes datos:
+
+- Fecha
+- Tipo: Compra o Venta.
+- Empleado
+- Cliente 
+- Precio
+
+CochesCutres.com solicita el desarrollo del siguiente software:
+
+- Poder mantener Clientes. (alta y modificación)
+- Poder mantener Empleados.(alta y modificación)
+- Poder mantener los vehículos.(modificación)
+- Registrar operaciones de compra/venta, añadiendo el vehículo en caso de compra, y quitándolo del stock en caso de venta.
+- Poder obtener listados de Clientes, Empleados y Vehículos (filtrando si está disponible o no, por marca o por modelo,
+según un rango de kilómetros)
+- Obtener un listado de compras y de ventas.
+
+CochesCutres.com está abierto a recibir nuevas propuestas o desarrollos que se consideren de interés.
+
+
+
+
+
+
