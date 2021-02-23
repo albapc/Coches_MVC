@@ -1,0 +1,51 @@
+﻿@model Coches_MVC.Models.Vehiculo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModificacionVehiculo</title>
+</head>
+<body>
+    <div>
+        <h1>Modificación Vehículos</h1>
+        <form method="post" action="/Vehiculos/ModificacionVehiculo">
+            ID Vehiculo:
+            <input type="text" name="ID_Vehiculo" value="@Model.ID_Vehiculo" readonly />
+            <br />
+            Marca:
+            <input type="text" name="marca" value="@Model.Marca" />
+            <br />
+            Modelo:
+            <input type="text" name="modelo" value="@Model.Modelo"/>
+            <br />
+            Numero de puertas:
+            <input type="text" name="numeroPuertas" value="@Model.NumeroPuertas" />
+            <br />
+            Color:
+            <input type="text" name="color" value="@Model.Color" />
+            <br />
+            Kilometros:
+            <input type="text" name="kilometros" value="@Model.Kilometros" />
+            <br />
+            Tipo:
+            <input type="text" name="tipoVehiculo" value="@Model.TipoVehiculo" />
+            <br />
+            Garantia:
+            <input type="text" name="garantia" value="@Model.Garantia" />
+            <br />
+            En stock:
+            <input type="text" name="enStock" value="@Model.EnStock" />
+            <br />
+            Fotografía:
+            <input type="text" name="fotografia" value="@Model.Fotografia" />
+            <br />
+            <input type="submit" value="Confirmar" />
+        </form>
+    </div>
+</body>
+</html>

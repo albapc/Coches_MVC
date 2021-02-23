@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Coches_MVC.Models.Operacion>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerOperaciones</title>
+</head>
+<body>
+    <div>
+        <h1>Lista de operaciones:</h1>
+        <table class="table">
+            <tr>
+                <th>
+                    ID Operacion
+                </th>
+                <th>
+                    Fecha
+                </th>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    ID empleado
+                </th>
+                <th>
+                    ID cliente
+                </th>
+                <th>
+                    Precio
+                </th>
+                <th>
+                    ID Vehículo
+                </th>
+                <th>
+                    Modificar
+                </th>
+            </tr>
+
+            @foreach (var operacion in Model)
+            {
+                <tr>
+                    <td>
+                        @operacion.ID_Operacion
+                    </td>
+                    <td>
+                        @operacion.Fecha
+                    </td>
+                    <td>
+                        @operacion.Tipo
+                    </td>
+                    <td>
+                        @operacion.Empleado
+                    </td>
+                    <td>
+                        @operacion.Cliente
+                    </td>
+                    <td>
+                        @operacion.Precio
+                    </td>
+                    <td>
+                        @operacion.Vehiculo
+                    </td>
+                    <td>
+                        <a href="/Empleados/ModificacionEmpleado?cod=@operacion.ID_Operacion">modifica?</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <a href="/Operaciones/AltaOperacion">Agregar</a>
+    </div>
+</body>
+</html>

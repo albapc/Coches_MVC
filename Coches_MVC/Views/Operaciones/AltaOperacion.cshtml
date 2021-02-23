@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AltaOperacion</title>
+</head>
+<body>
+    <div>
+        <h1>Registrar Operaciones</h1>
+        <form method="post" action="/Operaciones/AltaOperacion">
+            Fecha:
+            <input type="text" name="fecha" />
+            <br />
+            Tipo:
+            <input type="text" name="nombre" />
+            <br />
+            ID empleado:
+            <input type="text" name="ID_empleado" />
+            <br />
+            ID cliente:
+            <input type="text" name="ID_cliente" />
+            <br />
+            Precio:
+            <input type="text" name="precio" />
+            <br />
+            ID vehiculo:
+            <input type="text" name="ID_vehiculo" />
+            <br />
+            <input type="submit" value="Confirmar" />
+        </form>
+    </div>
+</body>
+</html>

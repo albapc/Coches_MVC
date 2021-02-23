@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Coches_MVC.Models.Persona>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerClientes</title>
+</head>
+<body>
+    <div>
+        <h1>Lista de clientes:</h1>
+        <table class="table">
+            <tr>
+                <th>
+                    ID Cliente
+                </th>
+                <th>
+                    NIF
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellidos
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Modificar
+                </th>
+            </tr>
+
+            @foreach (var cliente in Model)
+            {
+            <tr>
+                <td>
+                    @cliente.ID_Persona
+                </td>
+                <td>
+                    @cliente.NIF
+                </td>
+                <td>
+                    @cliente.Nombre
+                </td>
+                <td>
+                    @cliente.Apellidos
+                </td>
+                <td>
+                    @cliente.Telefono
+                </td>
+                <td>
+                    @cliente.Direccion
+                </td>
+                <td>
+                    @cliente.Email
+                </td>
+                <td>
+                    <a href="/Clientes/ModificacionCliente?cod=@cliente.ID_Persona">modifica?</a>
+                </td>
+            </tr>
+            }
+
+        </table>
+        <a href="/Clientes/AltaCliente">Agregar</a>
+    </div>
+</body>
+</html>

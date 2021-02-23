@@ -1,0 +1,42 @@
+﻿@model Coches_MVC.Models.Persona
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModificacionEmpleado</title>
+</head>
+<body>
+    <div>
+        <h1>Modificación Empleados</h1>
+        <form method="post" action="/Empleados/ModificacionEmpleado">
+            ID Empleado:
+            <input type="text" name="ID_Empleado" value="@Model.ID_Persona" readonly />
+            <br />
+            NIF:
+            <input type="text" name="NIF" value="@Model.NIF" />
+            <br />
+            Nombre:
+            <input type="text" name="nombre" value="@Model.Nombre" />
+            <br />
+            Apellidos:
+            <input type="text" name="apellidos" value="@Model.Apellidos" />
+            <br />
+            Telefono:
+            <input type="text" name="telefono" value="@Model.Telefono" />
+            <br />
+            Direccion:
+            <input type="text" name="direccion" value="@Model.Direccion" />
+            <br />
+            E-mail:
+            <input type="text" name="email" value="@Model.Email" />
+            <br />
+            <input type="submit" value="Confirmar" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Coches_MVC.Models.Vehiculo>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VerVehiculos</title>
+</head>
+<body>
+    <div>
+        <h1>Lista de vehículos:</h1>
+        <table class="table">
+            <tr>
+                <th>
+                    ID Vehiculo
+                </th>
+                <th>
+                    Marca
+                </th>
+                <th>
+                    Modelo
+                </th>
+                <th>
+                    Numero de puertas
+                </th>
+                <th>
+                    Color
+                </th>
+                <th>
+                    Kilometros
+                </th>
+                <th>
+                    Tipo de vehiculo
+                </th>
+                <th>
+                    Garantia
+                </th>
+                <th>
+                    En stock
+                </th>
+                <th>
+                    Fotografia
+                </th>
+                <th>
+                    Modificar
+                </th>
+            </tr>
+
+            @foreach (var vehiculo in Model)
+            {
+            <tr>
+                <td>
+                    @vehiculo.ID_Vehiculo
+                </td>
+                <td>
+                    @vehiculo.Marca
+                </td>
+                <td>
+                    @vehiculo.Modelo
+                </td>
+                <td>
+                    @vehiculo.NumeroPuertas
+                </td>
+                <td>
+                    @vehiculo.Color
+                </td>
+                <td>
+                    @vehiculo.Kilometros
+                </td>
+                <td>
+                    @vehiculo.TipoVehiculo
+                </td>
+                <td>
+                    @vehiculo.Garantia
+                </td>
+                <td>
+                    @vehiculo.EnStock
+                </td>
+                <td>
+                    @vehiculo.Fotografia
+                </td>
+                <td>
+                    <a href="/Vehiculos/ModificacionVehiculo?cod=@vehiculo.ID_Vehiculo">modifica?</a>
+                </td>
+            </tr>
+            }
+
+        </table>
+        <a href="/Operaciones/AltaOperacion">Agregar</a>
+    </div>
+</body>
+</html>
